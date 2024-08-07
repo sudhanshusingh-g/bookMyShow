@@ -1,7 +1,10 @@
 package com.example.bookmyshow.models;
 
-public enum SeatType{
-    GOLD,
-    PLATINUM,
-    SILVER
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Data
+@Entity
+public class SeatType extends BaseModel{
+    private String seatType;
 }

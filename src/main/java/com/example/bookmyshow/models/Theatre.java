@@ -14,8 +14,10 @@ import java.util.List;
 public class Theatre extends BaseModel{
     private String theatre_name;
     private String theatre_location;
+
     @OneToMany
     private List<Screen> screens;
+
     @ManyToOne
     private Region region;
 }

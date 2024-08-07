@@ -7,8 +7,11 @@ import lombok.Data;
 @Data
 @Entity
 public class SeatTypeShow extends BaseModel{
+    @ManyToOne
     private SeatType seatType;
+
     @ManyToOne
     private Show show;
+
     private double price;
 }

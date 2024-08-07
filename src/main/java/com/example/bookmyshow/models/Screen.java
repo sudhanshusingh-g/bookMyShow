@@ -8,12 +8,11 @@ import java.util.List;
 @Data
 @Entity
 public class Screen extends BaseModel {
-    private String screenName;
-    @ElementCollection(fetch = FetchType.EAGER)
-    @Enumerated(EnumType.ORDINAL)
-    @CollectionTable(name = "show_formats")
-    @Column(name = "format")
-    private List<Format> formatList;
+    private String title;
     @OneToMany
     private List<Seat> seats;
+
+    @Enumerated(EnumType.ORDINAL)
+    @ElementCollection
+    private List<Format> formats;
 }

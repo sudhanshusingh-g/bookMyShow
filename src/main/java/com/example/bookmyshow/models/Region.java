@@ -7,9 +7,8 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-@Entity(name = "cities")
+@Entity
 public class Region extends BaseModel {
-    private String regionName;
-    @OneToMany
-    private List<Theatre> theatres;
+    private String name;
+//    private List<Theatre> theatreList;
 }
